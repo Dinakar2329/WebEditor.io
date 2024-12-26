@@ -1,4 +1,3 @@
-```
 # Web Code Editor
 
 A simple, interactive web-based code editor that allows you to write, edit, and preview HTML, CSS, and JavaScript code in real-time. This project features a clean UI powered by Tailwind CSS, a code editor powered by CodeMirror, and various functionalities such as dark/light theme toggle, full-screen mode, and code downloading.
