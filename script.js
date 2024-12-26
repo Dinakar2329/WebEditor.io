@@ -76,16 +76,6 @@ fullscreenBtn.addEventListener("click", () => {
   newWindow.write(code);
   newWindow.close();
 
-  
-  setInterval(() => {
-    if (!fullscreenWindow.closed) {
-      const code = combinedEditor.getValue();
-      const newWindow = fullscreenWindow.document;
-      newWindow.open();
-      newWindow.write(code);
-      newWindow.close();
-    }
-  }, 1000); 
 });
 
 
@@ -100,7 +90,9 @@ downloadBtn.addEventListener("click", () => {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "index.html";
+  const titleMatch = code.match(/<title>(.*?)<\/title>/i);
+  const title = titleMatch ? titleMatch[1] : 'Untitled';
+  a.download = `${title.toLowerCase().replace(/\s+/g, '-')}.html`;
   a.click();
   URL.revokeObjectURL(url);
 });
