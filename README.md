@@ -46,4 +46,4 @@ You can easily extend the functionality by adding more editor modes (such as PHP
 ## License
 
 This project is open-source and available under the [MIT License](LICENSE).
-```
+
